@@ -7,7 +7,6 @@ library(matrixStats)
 mask.far = function(M, N, off) {
   idx = abs(row(M) - col(M) + off) >= N
   idx[,1:N] = F 
-  print(idx)
   M[idx] = NA
   return(M)
 }
